@@ -1,0 +1,59 @@
+#deck{
+	margin-top: 50px;
+	article{
+		background-color: #ddd;
+		border-radius: 5px;
+		min-height: 400px;
+		text-align: center;
+
+		h4 {
+			margin-top: 30px;
+		}
+
+		.centered{
+			display: inline-block;
+			float: none;
+		}
+		button.button{
+			float: left;
+			width:100%;
+			margin-top:20px;
+			border-radius: 2px;
+		}
+		button.button.inactive {
+			background-color:#999;
+			cursor: normal!important;
+		}
+		aside{
+			margin-top: 20px;
+		}
+		#panel {
+		    list-style: none;
+		    min-height: 70px;
+		    margin: 20px 0 0 0;
+		    padding: 10px;
+		    width: 100%;
+		    float: left;
+		    margin-bottom: 16px;
+		    border-radius: 1px;
+		    margin-bottom:30px;
+				li {
+				    float: none;
+				    color: #fff;
+				    list-style: none;
+				    margin: 0 3px 3px;
+				    border-radius: 2px;
+				    padding: 2px 4px;
+				    display: inline-block;
+				    width: 50px;
+
+				}
+
+		}
+		fieldset {
+			display: inline-block;
+			width: 100%;
+		}
+	}
+
+}

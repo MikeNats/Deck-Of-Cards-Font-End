@@ -1,0 +1,23 @@
+header{
+	background-color: #fff;
+		#logo {
+			margin: 0;
+			float: left;
+			display: block;
+			a{
+			    color: #000;
+			    display: block;
+			    font-size: 1rem;
+				height: 50px;
+				line-height: 50px;
+			}
+		}
+		aside{
+			float: right;
+			height: 50px;
+			line-height: 50px;
+			color: #000;
+			font-family: $base-FontFamily;
+		}
+}
+
