@@ -1,0 +1,17 @@
+node_js:
+  - 4.4.2
+  - 4.4.4
+  - 'stable'
+
+
+before_install:
+  - gem install sass
+  - npm install -g grunt-cli
+  - npm install -g grunt
+  - npm install -g bower
+
+before_script:
+  - npm install
+
+script:
+  - grunt deploy
