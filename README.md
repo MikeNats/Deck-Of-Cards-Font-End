@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/MikeNats/Deck-Of-Cards-Front-End.svg)](https://travis-ci.org/MikeNats/Deck-Of-Cards-Front-End) 
 ## Deck of Cards
 
 This is a Full Stack Responsive JavaScript Application that emulates simple operations with a deck of card game
