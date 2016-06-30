@@ -5,7 +5,7 @@
  * @type factory
  * @name deckApiFctry
  * @memberof module:deckModule
- * @description User authentication.
+ * @description End point for getting the cards.
  * @requires  $http
  * @requires deckModule+module:deckModule.CARDS_API_PATHS
  * @author Michail Tsougkranis
@@ -15,10 +15,10 @@
 
 import deckModule from '../deckModule';
 
-deckModule.factory('deckApiFctry', ['$http', ($http) => {
+deckModule.factory('deckApiFctry', ['$http', 'CARDS_API_PATHS', ($http, CARDS_API_PATHS) => {
 	return {
 		getCards: () => {
-			return $http.get('/api/cards');
+			return $http.get(CARDS_API_PATHS.GET_CARDS);
 		}
 	};
 }]);

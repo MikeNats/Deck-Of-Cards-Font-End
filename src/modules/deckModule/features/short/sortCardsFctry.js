@@ -30,20 +30,21 @@ deckModule.factory('sortCardsFctry', [() => {
 	};
 
 	return (activeCards) => {
-		return activeCards.filter(card => {
+
+		return activeCards.filter(card => { //take all suite C and sorted per number
 				return card.suite === 'C';
 			})
 			.sort(compare)
-			.concat(
-				activeCards.filter(card => {
+			.concat( //concatenate the below arrays with the above
+				activeCards.filter(card => { //take all suite S and sorted per number
 					return card.suite === 'S';
 				}).sort(compare),
 
-				activeCards.filter(card => {
+				activeCards.filter(card => { //take all suite H and sorted per number
 					return card.suite === 'H';
 				}).sort(compare),
 
-				activeCards.filter(card => {
+				activeCards.filter(card => { //take all suite D and sorted per number
 					return card.suite === 'D';
 				}).sort(compare)
 			);

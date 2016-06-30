@@ -23,7 +23,7 @@ describe('drawCardsFctry', () => {
 
 		expect(drawCardsFctry(cards, 2).length).toEqual(2);
 	});
-	it("should return not return any cards if the is no inactive card", () => {
+	it("should not return cards if there is no inactive card", () => {
 		cards = [{
 			active: true
 		}, {

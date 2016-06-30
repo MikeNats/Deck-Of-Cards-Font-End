@@ -21,10 +21,10 @@ describe('deckCtrl', () => {
 
 	describe('initialization', () => {
 
-		it('should set activeCards', () => {
+		it('should set activeCards as empty array', () => {
 			expect($scope.activeCards).toEqual([]);
 		});
-		it('should set numOfCardsToDraw', () => {
+		it('should set numOfCardsToDraw to zero', () => {
 			expect($scope.numOfCardsToDraw).toEqual(0);
 		});
 		it('should set message', () => {
@@ -39,6 +39,7 @@ describe('deckCtrl', () => {
 			$scope.$apply($scope.cards);
 
 			expect($scope.cards).toEqual('staff');
+			//expect(_deckApiFctry_.getCards).toHaveBeenCalld();
 		});
 	});
 });

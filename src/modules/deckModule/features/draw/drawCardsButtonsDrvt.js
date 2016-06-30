@@ -25,7 +25,7 @@ deckModule.directive('drawCards', ['drawCardsFctry', (drawCardsFctry) => {
 					</fieldset>`,
 		link: (scope, elem, attrs) => {
 			scope.drawCards = () => {
-				scope.activeCards = scope.activeCards.concat(drawCardsFctry(scope.cards, scope.numOfCardsToDraw));
+				scope.activeCards = scope.activeCards.concat(drawCardsFctry(scope.cards, scope.numOfCardsToDraw)); //increase the number of active cards
 				scope.message = 'You draw ' + scope.numOfCardsToDraw + '. You have picked in total ' + scope.activeCards.length + ' cards';
 				scope.numOfCardsToDraw = 0;
 			}

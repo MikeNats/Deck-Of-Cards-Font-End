@@ -6,8 +6,8 @@
  * @type factory
  * @name drawCardsFctry
  * @memberof module:deckModule
- * @description For each given number of cards returns an array
- * with the same length of the given  card number that contains,
+ * @description For each given number of cards to be drawn, returns an array
+ * with the same length of the given card number that contains,
  * non active cads,
  * starting from the top on the given cards array
  * @author Michail Tsougkranis
@@ -24,7 +24,7 @@ deckModule.factory('drawCardsFctry', [() => {
 
 		for (let i = 0; i < cards.length; i++) {
 			if (!cards[i].active) {
-				if (drawnCardsNum !== +numberOfCards) { //numberOfCards parse to number
+				if (drawnCardsNum !== +numberOfCards) { //numberOfCards is DOM value
 					drawnCardsNum++;
 					cards[i].active = true;
 					drawnCards.push(cards[i]);

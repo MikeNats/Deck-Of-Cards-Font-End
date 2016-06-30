@@ -1,8 +1,7 @@
 'use strict';
 
 let shuffleCardsFctry,
-	cards,
-	suffeled;
+	cards;
 
 describe('shuffleCards', () => {
 
@@ -14,9 +13,6 @@ describe('shuffleCards', () => {
 	});
 
 	it("should shuffle the given array", () => {
-		cards = [0, 1, 3, 4];
-		suffeled = shuffleCardsFctry(cards)[0];
-
-		expect(suffeled[0]).not.toEqual(cards[0]);
+		expect(shuffleCardsFctry([0, 1, 3, 4, 5])).not.toEqual([0, 1, 3, 4, 5]);
 	});
 });

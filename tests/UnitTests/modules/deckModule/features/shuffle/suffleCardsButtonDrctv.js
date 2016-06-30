@@ -1,31 +1,78 @@
-// 'use static';
-// /**
-//  * @framework angular
-//  * @kind module
-//  * @name usersAuthModule
-//  * @public
-//  * @static
-//  * @description Contains User Authentication Services.
-//  * @author Michail Tsougkranis
-//  * @version 1.0
-//  * @since Angular 1.5.5
-//  */
+'use strict';
 
-// import deckModule from '../deckModule';
+let $compile,
+	$rootScope,
+	drawCards,
+	element,
+	shuffleCardsFctry,
+	mockCards,
+	message;
 
-// deckModule.directive('shuffleCards', ['shuffleCardsFctry', (shuffleCardsFctry) => {
-// 	return {
-// 		restrict: 'E',
-// 		template: `<fieldset>
-// 						<button id="shuffle" ng-click="shuffleCards()" class="button" ng-class="{'inactive': activeCards.length === cards.length}">Shuffle Cards</button>
-// 					</fieldset>`,
-// 		link: (scope, elem, attrs) => {
-// 			scope.shuffleCards = () => {
-// 				if (scope.activeCards.length !== scope.cards.length) {
-// 					scope.cards = shuffleCardsFctry(scope.cards);
-// 					scope.message = 'Cards are shuffled';
-// 				}
-// 			}
-// 		}
-// 	}
-// }]);
+describe('shuffleCards', () => {
+
+	beforeEach(() => {
+		angular.mock.module('deckModule');
+		angular.mock.inject((_$rootScope_, shuffleCardsFctry, _$compile_) => {
+			$rootScope = _$rootScope_.$new();
+			$compile = _$compile_;
+			$rootScope.activeCards = [];
+			$rootScope.cards = [{
+					active: false,
+					suite: 'D',
+					number: '10'
+				},
+				{
+					active: false,
+					suite: 'C',
+					number: '1'
+				},
+				{
+					active: false,
+					suite: 'H',
+					number: '1'
+				},
+				{
+					active: false,
+					suite: 'D',
+					number: '2'
+			}];
+			$rootScope.message = 'Lets play!!!';
+			element = $compile(`<shuffle-cards></shuffle-cards>`)($rootScope);
+			$rootScope.$digest();
+		});
+	});
+
+	describe('Active cards are less than the non active', () => {
+
+		it('should shuffle the cards', () => {
+			mockCards = $rootScope
+			$rootScope.shuffleCards();
+
+			expect($rootScope.cards).not.toEqual(mockCards);
+		});
+
+		it('should set the message with a new value', () => {
+			message = 'Lets play!!!'
+			$rootScope.shuffleCards();
+
+			expect($rootScope.message).not.toEqual(message);
+		});
+	});
+	describe('Active cards length is the same with the length of non active', () => {
+		beforeEach(() => {
+			$rootScope.activeCards = $rootScope.cards
+		});
+
+		it('should not shuffle the cards', () => {
+			mockCards = $rootScope.cards
+
+			expect($rootScope.cards).toEqual(mockCards);
+		});
+		it('should not set the message with a new value', () => {
+			message = 'Lets play!!!'
+			$rootScope.shuffleCards();
+
+			expect($rootScope.message).toEqual(message);
+		});
+	});
+});
