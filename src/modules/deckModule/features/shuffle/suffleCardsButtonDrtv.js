@@ -21,7 +21,7 @@ deckModule.directive('shuffleCards', ['shuffleCardsFctry', (shuffleCardsFctry) =
 					</fieldset>`,
 		link: (scope, elem, attrs) => {
 			scope.shuffleCards = () => {
-				if (scope.activeCards.length <= scope.cards.length) { //while cards have not been drawn
+				if (scope.activeCards.length < scope.cards.length) { //while cards have not been drawn
 					scope.cards = shuffleCardsFctry(scope.cards);
 					scope.message = 'Cards are shuffled';
 				}
