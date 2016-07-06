@@ -26,8 +26,9 @@ How to use:
 
 Clone both repos under the same root folder:
 
-Front End repo: https://github.com/MikeNats/Deck-Of-Cards-Front-End.git
-Back End repo: https://github.com/MikeNats/Deck-Of-Cards-Back-End.git
+Front End repo: https://github.com/MikeNats/Deck-Of-Cards-Front-End.git 
+
+Back End repo: https://github.com/MikeNats/Deck-Of-Cards-Back-End.git 
 
 Open 2 terminals on the root folder
 
