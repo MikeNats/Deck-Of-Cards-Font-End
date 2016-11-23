@@ -3,23 +3,15 @@
 <html lang='en' ng-app='app'>
 <head>
   <meta charset='utf-8'>
-  <link href="https://www.ibm.com/favicon.ico" rel="icon"/>
   <title>Deck Cards</title>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <link rel='stylesheet' type='text/css' href='./app/app.min.css'>
+  <link rel='stylesheet' type='text/css' href='./app.min.css'>
 
 </head>
 <body>
 
-<header class='columns'>
-	<h1 id='logo'>
-<a title='Michail Tsougkranis' href=''  >Deck of Cards</a>
-	</h1>
-	<aside>			<a title='Michail Tsougkranis' target='_blank' href='https://uk.linkedin.com/in/michail-tsougkranis-b490b730
-' >Michail Tsougkranis</a></aside>
-</header>
-<section ui-view='indexPage' class='columns'></section>
-
-<script src='./app/app.min.js' ></script>
+<section ng-controller='panelCtrl'>
+</section>
+ <script src='./app.min.js' ></script>
 </body>
 </html>
