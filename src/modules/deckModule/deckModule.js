@@ -14,4 +14,4 @@
 
 import angular from 'angular';
 
-export default angular.module('panelModule', []);
+export default angular.module('deckModule', []);

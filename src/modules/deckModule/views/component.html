@@ -1,0 +1,17 @@
+<section 	id='deck'
+ 		  	class='large-16'
+ 		  	ng-controller="deckCtrl">
+
+	 <article class='columns large-16'>
+	 	<h4 id='message'>{{message}}</h4>
+
+	 	<ul id='panel' >
+	 		<li class='card' ng-repeat='activeCard in activeCards' style='background-color: {{activeCard.color}}'>{{activeCard.name }} {{activeCard.suite}}</li>
+	 	</ul>
+	 	<aside>
+			<shuffle-cards class='columns centered large-5 medium-5 small-16'></shuffle-cards>
+	 		<draw-cards class='columns centered large-5 medium-5 small-16'></draw-cards>
+	 		<sort-cards class='columns centered large-5 medium-5 small-16'></sort-cards>
+	 	</aside>
+	 </article>
+</section>

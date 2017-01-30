@@ -26,7 +26,7 @@ module.exports = (grunt) => {
 					},
 
 					files: {
-						'./app/app.min.js': ['./src/app.js', './src/**/*.js','./src/*.js']
+						'../App/app.min.js': ['./src/app.js', './src/**/*.js','./src/*.js']
 					}
 				}
 			},
@@ -36,7 +36,7 @@ module.exports = (grunt) => {
 						expand: true,
 						cwd: './',
 						src: ['./index.html', './src/modules/**/*.html', './pages/*.html'],
-						dest: './app',
+						dest: '../App',
 						ext: '.html'
             }]
 				}
@@ -52,14 +52,14 @@ module.exports = (grunt) => {
 						loadPath: ['node_modules/foundation-sites/assets']
 					},
 					files: {
-						'./app/app.min.css': ['./scss/**/*.scss', './scss/*.scss'],
+						'../App/app.min.css': ['./scss/**/*.scss', './scss/*.scss'],
 					}
 				}
 			},
 			uglify: {
 				my_target: {
 					files: {
-						'./app/app.min.js': ['./app/app.min.js']
+						'../App/app.min.js': ['../App/app.min.js']
 					}
 				}
 			},
